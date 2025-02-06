@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Scope Example</title>
+</head>
+<body>
+  <h1>Check the Output</h1>
+
+  <script>
+    // Block Scope
+
+    function sports() {
+      if (10 < 20) {
+        let cricket = "virat"; // 'cricket' is scoped within the block
+        document.write(cricket); // This will work and print "virat"
+      }
+      
+      // Uncommenting the line below would throw an error since 'cricket' is not accessible here
+      // document.write(cricket); // Error: cricket is not defined outside the block
+    }
+
+    sports();
+  </script>
+</body>
+</html>

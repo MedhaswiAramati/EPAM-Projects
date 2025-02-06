@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Scope Example</title>
+</head>
+<body>
+  <h1>Check the Output</h1>
+
+  <script>
+    // Global variables
+    var Apple = "red";
+    let Orange = "yellow";
+    const banana = "green";
+
+    function fruit() {
+      // Accessing global variables inside the function
+      document.write(Apple + "<br>");
+      document.write(Orange + "<br>");
+      document.write(banana + "<br>");
+    }
+
+    // Calling the function
+    fruit();
+  </script>
+</body>
+</html>

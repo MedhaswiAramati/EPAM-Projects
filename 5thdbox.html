@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alert, Prompt, Confirm Example</title>
+</head>
+<body>
+  <h1>Check the Alerts and Prompts</h1>
+
+  <script>
+    // Alert Message
+    alert("This is an Alert Message to User");
+
+    // Prompt for user's name
+    let userName = prompt("Please Enter Your Name: ");
+    console.log("User's Name: " + userName);
+
+    // Confirm action
+    let isConfirmed = confirm("Are You Sure?");
+    if (isConfirmed) {
+      console.log("User confirmed!");
+    } else {
+      console.log("User cancelled!");
+    }
+  </script>
+</body>
+</html>

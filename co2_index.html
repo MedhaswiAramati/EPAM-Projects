@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payslip</title>
+    <script>
+        function calculatePayslip() {
+            let basic = parseFloat(document.getElementById("basicSalary").value);
+            let workingDays = parseInt(document.getElementById("workingDays").value);
+            let daysPresent = parseInt(document.getElementById("daysPresent").value);
+
+            let salary = (basic / workingDays) * daysPresent;
+            let dns = basic * 0.09;
+            let hra = basic * 0.3;
+
+            let payslip = `Salary: ${salary} \nDNS (9%): ${dns} \nHRA (Hostel): ${hra}`;
+            alert(payslip);
+            return false;
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Employee Payslip Form</h2>
+    <form onsubmit="return calculatePayslip()">
+        Basic Salary: <input type="number" id="basicSalary" value="37900" required><br>
+        No. of Working Days: <input type="number" id="workingDays" value="30" required><br>
+        Days Present: <input type="number" id="daysPresent" required><br>
+        <input type="submit" value="Generate Payslip">
+    </form>
+
+</body>
+</html>
